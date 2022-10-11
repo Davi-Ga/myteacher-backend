@@ -24,5 +24,5 @@ class CadastrarAulaAPIView(APIView):
             )
             aula.save()
             aula_serializer = AulaSerializer(aula, many=False)
-            return Response(aula_serializer, status=HTTP_201_CREATED)
-        return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
+            return Response(aula_serializer.data, status=HTTP_201_CREATED)
+        return Response({"message": "Houveram erros de validação", "errors": serializer.errors}, status=HTTP_400_BAD_REQUEST)
