@@ -1,4 +1,4 @@
-# fly.toml file generated for myteacher-api on 2022-10-17T08:05:15-03:00
+# fly.toml file generated for myteacher-api on 2022-10-17T08:15:59-03:00
 
 app = "myteacher-api"
 kill_signal = "SIGINT"
