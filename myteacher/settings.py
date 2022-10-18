@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u&z09%8)gd+k20!75^!(#b5=rs(7ogcoim*!#qklqji%=1m7@(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['myteacher-api.fly.dev', '*']
 
 
 # Application definition
