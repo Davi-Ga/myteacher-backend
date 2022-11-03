@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  backend:
+    build: .
+    container_name: backend-django
+    restart: always
+    volumes:
+      - .:/app
+    expose:
+     - "8081"
+  
+  nginx:
+    build: nginx:stable-alpine
+    container_name: nginx-django
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    volumes:
+      - .:/app
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - backend
